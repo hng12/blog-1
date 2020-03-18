@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PostCard, { Post } from '~/components/post-card/index';
+import PostCard, { Post } from '~/components/post-card';
 import { render } from '~/utils/render-with-intl';
 
 const post: Post = {

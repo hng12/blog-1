@@ -26,7 +26,10 @@ const PostCard: React.FC<Post> = ({ path, image, date, title }) => {
   const image3x = getCloudinaryURL(image.imageUrl, [`h_${imageHeight * 3}`]);
   return (
     <Link href={path}>
-      <a className="overflow-hidden text-gray-800 transition-shadow duration-200 bg-white rounded-lg shadow-md w-100 ease-ease hover:shadow-2xl">
+      <a
+        className="overflow-hidden text-gray-800 transition-shadow duration-200 bg-white rounded-lg shadow-md w-100 ease-ease hover:shadow-2xl"
+        data-testid="post-link"
+      >
         <div className="h-80">
           <SimpleImg
             data-testid="post-image"
