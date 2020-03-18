@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { MDXProvider } from '@mdx-js/react';
 
-import Meta from '~/components/meta';
+import { Meta } from '~/components/meta';
 import Header from '~/components/header/index';
 import Paragraph from '~/components/paragraph';
 import { Post as PostType } from '~/components/post-card';
@@ -34,13 +34,13 @@ const ScrollProgress = styled.progress.attrs({ max: 100, min: 0 })`
   }
 `;
 
-const PostWrap = styled.div`
-  margin: 3rem auto 0;
-  max-width: 90rem;
-  width: 95%;
-  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
-  padding: 0 constant(safe-area-inset-right) 0 constant(safe-area-inset-left);
-`;
+// const PostWrap = styled.div`
+//   margin: 3rem auto 0;
+//   max-width: 90rem;
+//   width: 95%;
+//   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+//   padding: 0 constant(safe-area-inset-right) 0 constant(safe-area-inset-left);
+// `;
 
 interface Props {
   meta: PostType;
@@ -60,7 +60,7 @@ const Post: React.FC<Props> = ({ children, meta: { path, ...meta } }) => {
       <Meta {...meta} />
       <ScrollProgress value={scrollProgress} />
       <Header {...meta} />
-      <PostWrap>{children}</PostWrap>
+      <div className="w-11/12 max-w-screen-lg mx-auto mt-12">{children}</div>
     </MDXProvider>
   );
 };

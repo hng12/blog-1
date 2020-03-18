@@ -2,31 +2,17 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import styled from 'styled-components';
 
 import { name } from '~/utils/authorInfo';
 
-const Footer = styled.footer`
-  height: 8rem;
-  background: ${({ theme }) => theme.background};
-  font-size: 1.4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  a {
-    color: currentColor;
-    text-decoration: none;
-  }
-`;
-
-const FooterWrap: React.FC = () => {
+const Footer: React.FC = () => {
   const { pathname } = useRouter();
   const isHome = pathname === '/';
   return (
-    <Footer>
+    <footer className="flex items-center justify-center h-32 text-2xl">
       <Link href={{ pathname: '/' }}>
         <a
+          className="no-underline text-current"
           rel="home"
           aria-label="go home"
           onClick={event => {
@@ -39,8 +25,8 @@ const FooterWrap: React.FC = () => {
           &copy; {new Date().getFullYear()} {name}
         </a>
       </Link>
-    </Footer>
+    </footer>
   );
 };
 
-export default FooterWrap;
+export { Footer };

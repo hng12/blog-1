@@ -7,6 +7,12 @@ module.exports = {
       transitionTimingFunction: {
         ease: 'ease',
       },
+      gridTemplateColumns: {
+        'fill-120': 'repeat(auto-fill, minmax(30rem, 1fr))',
+      },
+      textColor: {
+        current: 'currentColor',
+      },
     },
   },
   variants: {},

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Navigation from '~/components/navigation';
-import Footer from '~/components/footer';
-import randomEmoji from '~/utils/emojis';
-import Meta from '~/components/meta';
+import { Navigation } from '~/components/navigation';
+import { Footer } from '~/components/footer';
+import { randomEmoji } from '~/utils/emojis';
+import { Meta } from '~/components/meta';
 
 if (!global.Intl) {
   global.Intl = require('intl');
@@ -40,13 +40,7 @@ const Document: React.FC = ({ children }) => {
   }, []);
 
   return (
-    <div
-      css={{
-        display: 'flex',
-        flexDirection: 'column',
-        minHeight: '100vh',
-      }}
-    >
+    <div className="flex flex-col min-h-screen">
       <Meta />
       <Navigation />
       <div css={{ flex: '1 1 auto' }}>{children}</div>

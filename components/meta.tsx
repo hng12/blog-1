@@ -94,4 +94,4 @@ const Meta: React.FC<Props> = ({ title, date, image }) => {
   );
 };
 
-export default Meta;
+export { Meta };
