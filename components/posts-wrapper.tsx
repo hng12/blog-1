@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const PostsWrapper = styled.div`
   margin: 0 auto;
   width: 95%;
-  padding-top: 9rem;
+  padding: 9rem 0 1rem;
   display: flex;
   flex-flow: row wrap;
 
