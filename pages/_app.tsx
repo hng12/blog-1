@@ -9,6 +9,8 @@ import GlobalStyle from '~/components/styles/global-style';
 import { colors } from '~/config';
 import Document from '~/components/layouts/document';
 
+import '~/styles/index.css';
+
 Router.events.on('routeChangeComplete', () => {
   Fathom.trackPageview();
 });
