@@ -34,14 +34,6 @@ const ScrollProgress = styled.progress.attrs({ max: 100, min: 0 })`
   }
 `;
 
-// const PostWrap = styled.div`
-//   margin: 3rem auto 0;
-//   max-width: 90rem;
-//   width: 95%;
-//   padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
-//   padding: 0 constant(safe-area-inset-right) 0 constant(safe-area-inset-left);
-// `;
-
 interface Props {
   meta: PostType;
 }
